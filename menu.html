@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu (Demo) — Saffron House, Gulberg Lahore | Prices in PKR</title>
+<meta name="description" content="Demo menu for the fictional Saffron House restaurant, Lahore: starters, grill, karahis, breads, desserts and drinks with prices in PKR. Filter by category or search.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add('js');</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Saffron House","servesCuisine":["Pakistani","Grill","Barbecue"],"priceRange":"Rs 60 – Rs 2,495","telephone":"+92-300-1234567","address":{"@type":"PostalAddress","streetAddress":"14-B Main Boulevard, Gulberg III","addressLocality":"Lahore","addressCountry":"PK"},"acceptsReservations":"True"}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="demo-ribbon"><p><strong>Demo website</strong> — built by Multi-Talented Services as a portfolio sample. Saffron House, its menu and its prices are fictional.</p></div>
+<header class="site-header">
+  <div class="wrap header-in">
+    <a class="wordmark" href="index.html" aria-label="Saffron House — home">Saffron <span>House</span></a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="site-nav" id="siteNav" aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="menu.html" aria-current="page">Menu</a>
+    <a href="order.html">Order on WhatsApp</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="visit.html">Visit &amp; About</a>
+    <a href="tel:+923001234567">0300 123 4567</a>
+    <a class="btn btn-primary btn-small" href="reservations.html">Reserve a table</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">The menu · November 2026 (demo)</p>
+        <h1>The menu</h1>
+        <p>Prices in Pakistani rupees, printed on the page — the same menu you will get at the table. Tap <strong>Add +</strong> to build a WhatsApp order as you browse. <strong>(V)</strong> vegetarian · <strong>(S)</strong> spicy.</p>
+      </div>
+      <div class="menu-chips" role="group" aria-label="Filter menu by category">
+        <button class="chip" data-cat="all" aria-pressed="true">All</button>
+        <button class="chip" data-cat="starters" aria-pressed="false">Starters</button>
+        <button class="chip" data-cat="grill" aria-pressed="false">From the Grill</button>
+        <button class="chip" data-cat="mains" aria-pressed="false">Mains</button>
+        <button class="chip" data-cat="breads" aria-pressed="false">Breads &amp; Rice</button>
+        <button class="chip" data-cat="desserts" aria-pressed="false">Desserts</button>
+        <button class="chip" data-cat="drinks" aria-pressed="false">Drinks</button>
+      </div>
+      <div class="field menu-search">
+        <label for="menuSearch">Search the menu</label>
+        <input id="menuSearch" type="search" placeholder="Try karahi, naan, chai…" autocomplete="off">
+      </div>
+      <p id="menuCount" aria-live="polite"></p>
+      <div id="menuResults"></div>
+      <p>Please tell your server about any allergy before ordering — several dishes are cooked with nuts, dairy and gluten in a shared kitchen.</p>
+      <p><a class="btn btn-primary" id="menuOrderLink" href="order.html">Start a WhatsApp order</a></p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div><p class="serif" style="font-size:1.4rem">Saffron <span style="color:var(--clay-tint)">House</span></p><p>Grill &amp; kitchen in Gulberg, Lahore. Menu with printed prices, table reservations and WhatsApp ordering.</p></div>
+      <div><h3 style="font-size:1.05rem">Explore</h3><p><a href="menu.html">Menu</a><br><a href="order.html">Order on WhatsApp</a><br><a href="reservations.html">Reservations</a><br><a href="gallery.html">Gallery</a></p></div>
+      <div><h3 style="font-size:1.05rem">Contact</h3><p>14-B Main Boulevard, Gulberg III, Lahore<br><a href="tel:+923001234567">0300 123 4567</a><br>Open daily 12:00 pm – 12:00 am</p></div>
+    </div>
+    <p class="footer-note"><strong>Demo note:</strong> Saffron House is a fictional restaurant. This demo website was built by Multi-Talented Services (MTS) as a portfolio sample — menu, prices, reviews and bookings are demonstration data only; no real orders or reservations are taken. © <span id="year">2026</span> Saffron House (Demo).</p>
+  </div>
+</footer>
+<script src="js/data.js"></script>
+<script src="js/logic.js"></script>
+<script src="js/order-state.js"></script>
+<script src="js/main.js"></script>
+<script src="js/menu.js"></script>
+</body>
+</html>

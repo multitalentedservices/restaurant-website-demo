@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visit &amp; About (Demo) — Saffron House, Gulberg Lahore</title>
+<meta name="description" content="Demo visit page for the fictional Saffron House restaurant: our story, opening hours, address, Google Maps link and guest reviews.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add('js');</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Saffron House","servesCuisine":["Pakistani","Grill","Barbecue"],"priceRange":"Rs 60 – Rs 2,495","telephone":"+92-300-1234567","address":{"@type":"PostalAddress","streetAddress":"14-B Main Boulevard, Gulberg III","addressLocality":"Lahore","addressCountry":"PK"},"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"12:00","closes":"00:00"},"acceptsReservations":"True"}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="demo-ribbon"><p><strong>Demo website</strong> — built by Multi-Talented Services as a portfolio sample. Saffron House, its menu and its prices are fictional.</p></div>
+<header class="site-header">
+  <div class="wrap header-in">
+    <a class="wordmark" href="index.html" aria-label="Saffron House — home">Saffron <span>House</span></a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="site-nav" id="siteNav" aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="order.html">Order on WhatsApp</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="visit.html" aria-current="page">Visit &amp; About</a>
+    <a href="tel:+923001234567">0300 123 4567</a>
+    <a class="btn btn-primary btn-small" href="reservations.html">Reserve a table</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="section">
+    <div class="wrap split">
+      <div class="reveal">
+        <p class="kicker">Our story</p>
+        <h1>A small kitchen with one rule: print the prices</h1>
+        <p>Saffron House began, in this fictional telling, as a six-table grill on Main Boulevard where the owner wrote the day's prices on a board by the door. The room has grown — a family hall, a quiet corner for working dinners — but the rule has not changed: the menu on this website is the menu at the table, prices included.</p>
+        <p>Everything is cooked to order over charcoal or in the wok: kebabs hand-minced each morning, karahis finished in desi ghee, naan rolled when you sit down. Nothing waits under a lamp.</p>
+        <p><a class="btn btn-primary" href="reservations.html">Reserve a table</a> <a class="btn btn-ghost" href="gallery.html">See the food</a></p>
+      </div>
+      <img class="reveal" src="assets/interior.jpg" alt="The Saffron House dining room with brick walls and brass lamps (demo photo)">
+    </div>
+  </section>
+
+  <section class="section section--tint">
+    <div class="wrap split">
+      <div class="visit-panel reveal">
+        <p class="kicker" style="color:var(--clay-tint)">Find us</p>
+        <h2 style="color:var(--paper)">14-B Main Boulevard, Gulberg III, Lahore</h2>
+        <p>Two minutes from Liberty Market. Parking on Main Boulevard; valet on Friday–Sunday evenings.</p>
+        <p><a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&amp;query=Saffron+House+Main+Boulevard+Gulberg+III+Lahore" target="_blank" rel="noopener">Open in Google Maps</a></p>
+        <p>Call: <a href="tel:+923001234567">0300 123 4567</a><br>WhatsApp orders: <a href="order.html">order page</a></p>
+      </div>
+      <div class="reveal">
+        <p class="kicker">Opening hours</p>
+        <h2>Open every day</h2>
+        <ul class="hours">
+          <li><span>Monday – Thursday</span><strong>12:00 pm – 12:00 am</strong></li>
+          <li><span>Friday</span><strong>12:00 pm – 1:00 am</strong></li>
+          <li><span>Saturday</span><strong>12:00 pm – 1:00 am</strong></li>
+          <li><span>Sunday</span><strong>12:00 pm – 12:00 am</strong></li>
+        </ul>
+        <p style="margin-top:14px">Last seating 30 minutes before close. Kitchen closes for orders 45 minutes before close.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker">Google reviews</p>
+        <h2>Rated 4.8 out of 5</h2>
+        <p>From 214 Google reviews. The reviews below are demo reviews written for this portfolio sample — a live site would show the restaurant's real Google reviews here.</p>
+      </div>
+      <div class="grid grid-2" id="allReviews"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div><p class="serif" style="font-size:1.4rem">Saffron <span style="color:var(--clay-tint)">House</span></p><p>Grill &amp; kitchen in Gulberg, Lahore. Menu with printed prices, table reservations and WhatsApp ordering.</p></div>
+      <div><h3 style="font-size:1.05rem">Explore</h3><p><a href="menu.html">Menu</a><br><a href="order.html">Order on WhatsApp</a><br><a href="reservations.html">Reservations</a><br><a href="gallery.html">Gallery</a></p></div>
+      <div><h3 style="font-size:1.05rem">Contact</h3><p>14-B Main Boulevard, Gulberg III, Lahore<br><a href="tel:+923001234567">0300 123 4567</a><br>Open daily 12:00 pm – 12:00 am</p></div>
+    </div>
+    <p class="footer-note"><strong>Demo note:</strong> Saffron House is a fictional restaurant. This demo website was built by Multi-Talented Services (MTS) as a portfolio sample — menu, prices, reviews and bookings are demonstration data only; no real orders or reservations are taken. © <span id="year">2026</span> Saffron House (Demo).</p>
+  </div>
+</footer>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+(function(){var D=window.SAFFRON_DATA;document.getElementById('allReviews').innerHTML=D.REVIEWS.map(function(r){return '<article class="review-card"><p class="stars" aria-label="'+r.stars+' out of 5 stars">'+'★'.repeat(r.stars)+'☆'.repeat(5-r.stars)+'</p><p>'+r.text+'</p><p><strong>'+r.name+'</strong> · <span class="when">'+r.when+' · Google review (demo)</span></p></article>';}).join('');})();
+</script>
+</body>
+</html>

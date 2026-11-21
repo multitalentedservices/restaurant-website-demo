@@ -1,0 +1,67 @@
+PASS  menu has >= 28 items
+PASS  menu item count is 31 [31 === 31]
+PASS  all ids unique
+PASS  every item has name/desc/price>0
+PASS  every item category exists
+PASS  every category has >= 4 items
+PASS  at least 3 signature dishes
+PASS  reviews: 4 demo reviews, stars 1-5
+PASS  filter all returns all [31 === 31]
+PASS  filter grill returns 5 [5 === 5]
+PASS  filter desserts returns 4 [4 === 4]
+PASS  search karahi finds karahis
+PASS  search within category respects both [2 === 2]
+PASS  search no match returns 0 [0 === 0]
+PASS  order total 2*995+4*145+1*445 [3015 === 3015]
+PASS  order count [7 === 7]
+PASS  order lines count [3 === 3]
+PASS  empty order total 0 [0 === 0]
+PASS  unknown id ignored [0 === 0]
+PASS  zero qty ignored [0 === 0]
+PASS  message lists kebab line
+PASS  message has formatted total
+PASS  message includes name
+PASS  URL starts with wa.me demo number
+PASS  URL is encoded (no raw newlines)
+PASS  valid reservation passes [0 === 0]
+PASS  past date rejected
+PASS  today accepted
+PASS  empty name rejected
+PASS  1-char name rejected
+PASS  bad phone rejected
+PASS  +92 phone accepted
+PASS  landline rejected
+PASS  missing time rejected
+PASS  too-early time rejected
+PASS  0 guests rejected
+PASS  21 guests rejected
+PASS  index.html has demo ribbon
+PASS  index.html has footer demo note
+PASS  index.html has a <title>
+PASS  menu.html has demo ribbon
+PASS  menu.html has footer demo note
+PASS  menu.html has a <title>
+PASS  order.html has demo ribbon
+PASS  order.html has footer demo note
+PASS  order.html has a <title>
+PASS  reservations.html has demo ribbon
+PASS  reservations.html has footer demo note
+PASS  reservations.html has a <title>
+PASS  gallery.html has demo ribbon
+PASS  gallery.html has footer demo note
+PASS  gallery.html has a <title>
+PASS  visit.html has demo ribbon
+PASS  visit.html has footer demo note
+PASS  visit.html has a <title>
+PASS  all internal href/src resolve (122 refs)
+PASS  page titles unique
+PASS  code weight < 400 KB (actual 68.1 KB)
+PASS  8 photos present
+PASS  each photo <= 120 KB (max 115 KB)
+PASS  media total <= 1.6 MB (actual 873 KB)
+PASS  sitemap.xml exists
+PASS  robots.txt exists
+PASS  index has Restaurant JSON-LD
+PASS  no lorem ipsum anywhere
+
+=== 65 passed, 0 failed ===

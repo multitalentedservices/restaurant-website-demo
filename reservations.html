@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reserve a Table (Demo) — Saffron House, Gulberg Lahore</title>
+<meta name="description" content="Demo table reservation form for the fictional Saffron House restaurant, Lahore — with live validation and a demo confirmation.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="demo-ribbon"><p><strong>Demo website</strong> — built by Multi-Talented Services as a portfolio sample. Saffron House, its menu and its prices are fictional.</p></div>
+<header class="site-header">
+  <div class="wrap header-in">
+    <a class="wordmark" href="index.html" aria-label="Saffron House — home">Saffron <span>House</span></a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="site-nav" id="siteNav" aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="order.html">Order on WhatsApp</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="visit.html">Visit &amp; About</a>
+    <a href="tel:+923001234567">0300 123 4567</a>
+    <a class="btn btn-primary btn-small" href="reservations.html" aria-current="page">Reserve a table</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="section">
+    <div class="wrap" style="max-width:760px">
+      <div class="section-head">
+        <p class="kicker">Reservations</p>
+        <h1>Reserve a table</h1>
+        <p>We seat guests daily from 12:00 pm to 11:30 pm. For parties over 20, call us on <a href="tel:+923001234567">0300 123 4567</a>. This is a demo form — the confirmation below is a demonstration state and no real booking is made.</p>
+      </div>
+
+      <form id="reserveForm" novalidate>
+        <div class="form-row">
+          <div class="field" id="field-name">
+            <label for="f-name">Your name</label>
+            <input id="f-name" type="text" placeholder="e.g. Ahmed Raza" autocomplete="name" aria-describedby="err-name">
+            <p class="error-text" id="err-name" role="alert"></p>
+          </div>
+          <div class="field" id="field-phone">
+            <label for="f-phone">Mobile number</label>
+            <input id="f-phone" type="tel" placeholder="0300 1234567" autocomplete="tel" aria-describedby="err-phone">
+            <p class="error-text" id="err-phone" role="alert"></p>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field" id="field-date">
+            <label for="f-date">Date</label>
+            <input id="f-date" type="date" aria-describedby="err-date">
+            <p class="error-text" id="err-date" role="alert"></p>
+          </div>
+          <div class="field" id="field-time">
+            <label for="f-time">Time</label>
+            <select id="f-time" aria-describedby="err-time">
+              <option value="">Choose a time…</option>
+              <option>12:30</option><option>13:30</option><option>15:00</option>
+              <option>18:00</option><option>19:00</option><option>20:00</option>
+              <option>21:00</option><option>22:00</option><option>23:00</option>
+            </select>
+            <p class="error-text" id="err-time" role="alert"></p>
+          </div>
+        </div>
+        <div class="field" id="field-guests">
+          <label for="f-guests">Guests</label>
+          <select id="f-guests" aria-describedby="err-guests">
+            <option value="">How many guests?</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option>
+            <option>5</option><option>6</option><option>8</option><option>10</option>
+            <option>12</option><option>15</option><option>20</option>
+          </select>
+          <p class="error-text" id="err-guests" role="alert"></p>
+        </div>
+        <button class="btn btn-primary" type="submit">Request this table</button>
+      </form>
+
+      <div class="confirm-box" id="confirmBox" hidden>
+        <span class="badge">Demo confirmation</span>
+        <h2 style="margin-top:12px">Table requested — thank you</h2>
+        <p>This is a demonstration confirmation. On a live site, the restaurant would confirm by phone or WhatsApp before your visit.</p>
+        <dl>
+          <dt>Name</dt><dd id="c-name"></dd>
+          <dt>When</dt><dd id="c-when"></dd>
+          <dt>Guests</dt><dd id="c-guests"></dd>
+          <dt>Phone</dt><dd id="c-phone"></dd>
+          <dt>Reference</dt><dd id="c-ref"></dd>
+        </dl>
+        <button class="btn btn-dark" id="bookAnother" type="button">Book another table</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div><p class="serif" style="font-size:1.4rem">Saffron <span style="color:var(--clay-tint)">House</span></p><p>Grill &amp; kitchen in Gulberg, Lahore. Menu with printed prices, table reservations and WhatsApp ordering.</p></div>
+      <div><h3 style="font-size:1.05rem">Explore</h3><p><a href="menu.html">Menu</a><br><a href="order.html">Order on WhatsApp</a><br><a href="reservations.html">Reservations</a><br><a href="gallery.html">Gallery</a></p></div>
+      <div><h3 style="font-size:1.05rem">Contact</h3><p>14-B Main Boulevard, Gulberg III, Lahore<br><a href="tel:+923001234567">0300 123 4567</a><br>Open daily 12:00 pm – 12:00 am</p></div>
+    </div>
+    <p class="footer-note"><strong>Demo note:</strong> Saffron House is a fictional restaurant. This demo website was built by Multi-Talented Services (MTS) as a portfolio sample — menu, prices, reviews and bookings are demonstration data only; no real orders or reservations are taken. © <span id="year">2026</span> Saffron House (Demo).</p>
+  </div>
+</footer>
+<script src="js/logic.js"></script>
+<script src="js/main.js"></script>
+<script src="js/reserve.js"></script>
+</body>
+</html>

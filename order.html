@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order on WhatsApp (Demo) — Saffron House, Gulberg Lahore</title>
+<meta name="description" content="Demo WhatsApp ordering for the fictional Saffron House restaurant: build your order, see the live total, and send it prefilled on WhatsApp.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="demo-ribbon"><p><strong>Demo website</strong> — built by Multi-Talented Services as a portfolio sample. Saffron House, its menu and its prices are fictional.</p></div>
+<header class="site-header">
+  <div class="wrap header-in">
+    <a class="wordmark" href="index.html" aria-label="Saffron House — home">Saffron <span>House</span></a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="site-nav" id="siteNav" aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="order.html" aria-current="page">Order on WhatsApp</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="visit.html">Visit &amp; About</a>
+    <a href="tel:+923001234567">0300 123 4567</a>
+    <a class="btn btn-primary btn-small" href="reservations.html">Reserve a table</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Eating at home tonight?</p>
+        <h1>Order on WhatsApp</h1>
+        <p>Add dishes, adjust quantities, and send the whole order prefilled on WhatsApp. We confirm your total and time before you pay anything. This demo sends to a demo number and keeps a demo order log in your browser.</p>
+      </div>
+      <div class="order-layout">
+        <div id="pickList" aria-label="Choose dishes"></div>
+        <aside class="order-panel" aria-label="Your order">
+          <h3>Your order</h3>
+          <div id="orderLines"></div>
+          <div class="order-total"><span>Total</span><span id="orderTotal">Rs 0</span></div>
+          <div class="field">
+            <label for="orderName" style="color:var(--paper)">Your name (optional)</label>
+            <input id="orderName" type="text" placeholder="e.g. Ahmed" autocomplete="name">
+          </div>
+          <a class="btn btn-whatsapp" id="waOrderBtn" target="_blank" rel="noopener" disabled>Order on WhatsApp</a>
+          <h3 style="margin-top:26px">Order log (demo tracking)</h3>
+          <ul class="order-log" id="orderLog"></ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div><p class="serif" style="font-size:1.4rem">Saffron <span style="color:var(--clay-tint)">House</span></p><p>Grill &amp; kitchen in Gulberg, Lahore. Menu with printed prices, table reservations and WhatsApp ordering.</p></div>
+      <div><h3 style="font-size:1.05rem">Explore</h3><p><a href="menu.html">Menu</a><br><a href="order.html">Order on WhatsApp</a><br><a href="reservations.html">Reservations</a><br><a href="gallery.html">Gallery</a></p></div>
+      <div><h3 style="font-size:1.05rem">Contact</h3><p>14-B Main Boulevard, Gulberg III, Lahore<br><a href="tel:+923001234567">0300 123 4567</a><br>Open daily 12:00 pm – 12:00 am</p></div>
+    </div>
+    <p class="footer-note"><strong>Demo note:</strong> Saffron House is a fictional restaurant. This demo website was built by Multi-Talented Services (MTS) as a portfolio sample — menu, prices, reviews and bookings are demonstration data only; no real orders or reservations are taken. © <span id="year">2026</span> Saffron House (Demo).</p>
+  </div>
+</footer>
+<script src="js/data.js"></script>
+<script src="js/logic.js"></script>
+<script src="js/order-state.js"></script>
+<script src="js/main.js"></script>
+<script src="js/order.js"></script>
+</body>
+</html>
