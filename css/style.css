@@ -14,7 +14,8 @@ h1{font-size:clamp(2.4rem,7vw,4.2rem);font-weight:600}
 h2{font-size:clamp(1.8rem,4.5vw,2.6rem);font-weight:600}
 h3{font-size:1.35rem;font-weight:600}
 p{margin:0 0 1em}
-a{color:var(--clay-dark)}
+a{color:var(--clay-dark);text-decoration:none}
+ul{list-style:none;margin:0;padding:0}
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px;min-width:0}
 .section{padding:64px 0}
 .section--dark{background:var(--ink);color:var(--paper)}
@@ -168,4 +169,48 @@ a{color:var(--clay-dark)}
   html{scroll-behavior:auto}
   .js .reveal{opacity:1;transform:none;transition:none}
   .kenburns{animation:none}
+}
+
+/* ============================================================
+   PREMIUM LAYER — 2026-11-22 upgrade (first Lenis + GSAP site)
+   Base link/list rules above are untouched (P1 preserved).
+   ============================================================ */
+
+/* Lenis owns scroll smoothing on the premium page; CSS smooth
+   scrolling would fight it. Native behaviour everywhere else. */
+html.lenis-on{scroll-behavior:auto}
+
+/* Masked line-rise hero headline (index). Lines are plain
+   inline spans without JS — mask + rise exist only under .js,
+   and GSAP (not CSS) drives the motion, so a failed library
+   load leaves the headline fully visible. */
+.js .hero .lm{display:block;overflow:hidden;padding-bottom:.09em;margin-bottom:-.09em}
+.js .hero .lm-in{display:block;will-change:transform}
+
+/* Pinned tandoor chapter (index) */
+.chapter-rule{height:3px;background:var(--clay);border-radius:2px;transform-origin:left center;margin:4px 0 18px;max-width:180px}
+.chapter-media{overflow:hidden;border-radius:var(--radius)}
+.chapter-media .chapter-img{width:100%;height:100%;object-fit:cover;min-height:280px;will-change:transform}
+
+/* Booking spine — the reservation path restated at section
+   endings, in the site's own button system. */
+.book-spine{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:30px 0}
+.book-spine-in{display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;justify-content:space-between}
+.book-spine p{font-family:"Fraunces",serif;font-size:clamp(1.25rem,2.6vw,1.6rem);font-weight:600;margin:0}
+.book-spine-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px}
+.book-spine-tel{font-weight:700;color:var(--clay-dark)}
+
+/* Menu re-presented as typography (menu page): larger serif
+   dish names, display-scale category headings, more air —
+   same data, same dotted leaders, same prices. */
+.menu-cat h3{font-size:clamp(1.6rem,3.6vw,2.1rem);letter-spacing:-.01em;border-bottom:2px solid var(--ink);padding-bottom:10px;margin:38px 0 4px}
+.menu-cat:first-child h3{margin-top:10px}
+.mi{padding:16px 0}
+.mi-name{font-size:1.32rem;line-height:1.25}
+.mi-desc{font-size:.97rem;margin-top:4px}
+.mi-price{font-size:1.14rem}
+
+@media(prefers-reduced-motion:reduce){
+  .js .hero .lm-in{will-change:auto}
+  .chapter-media .chapter-img{will-change:auto}
 }

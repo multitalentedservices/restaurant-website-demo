@@ -34,3 +34,82 @@ Reasons (defects as: what is wrong · where · what fixed looks like):
 Next step: [ ] To AICOS-025 release gate   [X] Back to Gate 5 (evidence completions only)   [ ] Back to Gate 2
 
 Test-battery disclosure: NO assertion was amended. tests.js was written fresh for this project and passed 65/65 as written (tests-output.log).
+
+---
+
+## Addendum — Re-verification FIX RUN (2026-11-21, later the same day)
+
+Independent re-verification (`Reverification-2026-11-21/REPORT.md`) found 2 visible defects,
+both in the header. Both FIXED, re-shot and read; battery **65/65 PASS** unamended after fixes:
+
+- **R-1 (visible) — desktop header mis-built on all 6 pages.** The `<nav class="site-nav">` sat
+  OUTSIDE the `.wrap` container as a sibling of the header row, so the nav row started flush at
+  x=0 and the CTA pill straddled the header's bottom border. Fix: the nav now lives INSIDE
+  `.wrap.header-in` on all 6 pages (flex-wrap row: wordmark · nav · toggle; the mobile panel
+  takes a full-width second row inside the same container). Proof (DOM probe, all 6 pages,
+  1440px): wordmark left = 180px (container edge), CTA fully inside the header (bottom 95 ≤
+  header bottom 107); `fix-restaurant/*-desktop.png` read page by page.
+- **R-2 (visible) — header "Reserve a table" label near-black on brick (~2:1), and INVISIBLE
+  (solid empty pill) on reservations.html.** Root cause: `.site-nav a{color:ink}` out-specified
+  `.btn-primary`, and `.site-nav a[aria-current="page"]{color:clay}` painted the current-page
+  CTA brick-on-brick. Fix: nav colour rules now scope to `a:not(.btn)`, so the CTA keeps the
+  button system's parchment-on-brick everywhere, current page included. Proof (computed styles,
+  all 6 pages + open mobile menu): CTA colour rgb(246,241,232) on rgb(156,61,46), text
+  "Reserve a table" present; `fix-restaurant/reservations-desktop.png` shows the labelled pill.
+- **Same-family audit fix (no defect was filed against this site):** the scroll reveal gated
+  opacity (`.js .reveal{opacity:0}` + IO). Replaced with the v3 pattern — opacity never gated,
+  position-only rise — so no section can freeze blank at any scroll speed, matching the fix
+  applied to Gift Basket / Real Estate. Re-shoot: 12 page×viewport combos, 0 blank / 0 overflow.
+
+**Score: unchanged at 84/100 — REJECT (evidence bar only).** Held points remain served-preview
+CWV, the AICOS-112 §0 sign-off, and keyboard-walk + reduced-motion captures.
+
+---
+
+## Addendum — PREMIUM UPGRADE, Ladder #3 (2026-11-22)
+
+First Lenis + GSAP site in the portfolio, per Premium-Standard-and-Library-Plan §5.
+Battery: **65/65 PASS unamended before AND after.** Console: 0 errors, 0 page errors
+across all captures. All 6 pages re-shot at 390 + 1440 full-page: 0 overflow.
+
+What was added (index.html only carries the library stack):
+- **Lenis 1.3.27 + GSAP 3.15.1 + ScrollTrigger** (vendored in assets/vendor/), synced
+  via the documented ticker pattern. Probe-verified live (html carries Lenis classes,
+  gsap.version 3.15.1). Reduced-motion probe: Lenis OFF, no pin-spacer, page complete.
+- **Signature moment — pinned tandoor chapter**: pin + scrub (image scale 1.16→1,
+  chapter lines rise at 120ms stagger, clay rule draws). Mid-pin frame captured and
+  read (screenshots/signature-moment.png). One defect found and fixed during the pass:
+  the pin originally started at viewport top and the sticky header clipped the chapter
+  kicker — pin now starts at top+=72px, re-captured clean. On <920px the chapter is a
+  simple once-only reveal (no pin), verified in a phone viewport capture.
+- **Hero**: masked two-line rise (900ms, 100ms stagger) + quiet supporting rise;
+  transform-only, so a failed library load leaves the headline fully visible.
+- **Section reveals**: GSAP, 850ms, 100ms stagger, fire once at 88% viewport,
+  transform-only (the v3 no-blank rule preserved; GSAP targets never carry .reveal).
+- **Menu as typography** (menu.html, CSS-only): category headings at display serif
+  (measured 33.6px), dish names 21.1px, more air — same data, leaders and prices;
+  filter re-probed (31 dishes → 5 grill).
+- **Booking spine**: a Reserve band (site's own button system + phone link) now ends
+  the signatures and reviews sections on index, and closes menu, gallery and visit.
+
+JS weight (gzip, measured): index (hero) **56.4 KB** total (existing 4.4 + GSAP 27.8 +
+ScrollTrigger 17.6 + Lenis 5.3 + premium.js 1.4) ≤ 90 budget · plain pages unchanged
+at 2.9–5.9 KB ≤ 20. No Alpine/Three.js on this site (not in its §5 outline).
+
+PREMIUM GATE: P1 PASS (base link/list rules untouched; screenshots re-read, 0 default
+links) · P2 PASS (Lenis on the hero-led page only; other pages keep native scroll by
+plan) · P3 PASS (exactly one pinned scene; reveals at award medians, once, 88%) ·
+P4 PARTIAL (Fraunces hero at clamp(2.4rem,7vw,4.2rem) — deliberate fine-dining
+restraint per GEM/Zimmerl references, below statement-hero scale; kickers provide the
+second voice) · P5 PASS (real charcoal-grill photography + Ken Burns, no slider) ·
+P6 PASS (reservation + WhatsApp order depth pre-existing; booking spine deepens the
+conversion path) · P7 PARTIAL (hover/focus/active in-system everywhere; View
+Transitions not assigned to this site in §5 and not added) · P8 PASS on JS budgets;
+CWV still unmeasured (no served preview — held, not estimated) · P9 PASS
+(reduced-motion + no-JS captures read; chapter complete and static in both) ·
+P10 PASS (fictional/demo labelling untouched; no content or prices changed).
+
+**Re-score: 88 / 100 (was 84) — REJECT, evidence bar only.** Gains: Animation &
+interactions 8→10 (real signature scene + disciplined reveals), Typography 9→10
+(menu as typography), UI/UX 13→14 (booking spine). Held points unchanged:
+served-preview CWV, AICOS-112 §0 sign-off, keyboard-walk record.

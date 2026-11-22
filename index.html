@@ -6,9 +6,10 @@
 <title>Saffron House (Demo) — Grill &amp; Kitchen, Gulberg Lahore | Home</title>
 <meta name="description" content="Demo restaurant website by Multi-Talented Services: Saffron House, a fictional grill & kitchen in Gulberg, Lahore — menu, reservations and WhatsApp ordering.">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/vendor/lenis.css">
 <link rel="stylesheet" href="css/style.css">
 <script>document.documentElement.classList.add('js');</script>
 <script type="application/ld+json">
@@ -39,7 +40,7 @@
     <img class="hero-photo kenburns" src="assets/hero-grill.jpg" alt="Kebab skewers and chicken tikka grilling over glowing charcoal at Saffron House (demo photo)">
     <div class="wrap hero-in">
       <p class="kicker">Grill &amp; kitchen · Gulberg, Lahore</p>
-      <h1>Dinner, straight off the charcoal.</h1>
+      <h1><span class="lm"><span class="lm-in">Dinner, straight </span></span><span class="lm"><span class="lm-in">off the charcoal.</span></span></h1>
       <p class="hero-line">Kebabs, karahis and naan from the tandoor — a small Lahore kitchen that prints its prices on the page and answers on WhatsApp.</p>
       <div class="hero-facts" role="list" aria-label="Good to know">
         <p role="listitem"><span>Open today</span> 12:00 pm – 12:00 am</p>
@@ -55,45 +56,46 @@
 
   <section class="section">
     <div class="wrap">
-      <div class="section-head reveal">
+      <div class="section-head" data-motion>
         <p class="kicker">House signatures</p>
         <h2>Three dishes we are known for</h2>
         <p>Every signature is on the full menu with its price — no surprises at the table.</p>
       </div>
-      <div class="grid grid-3">
-        <article class="card reveal">
+      <div class="grid grid-3" data-motion-group>
+        <article class="card">
           <img src="assets/dish-kebab.jpg" alt="Beef seekh kebabs on a slate plate with mint chutney (demo photo)">
           <div class="card-body"><span class="badge">House signature</span><h3>Beef Seekh Kebab</h3><p>Hand-minced beef, green chilli and ginger, grilled over charcoal — four skewers.</p><p class="price">Rs 995</p></div>
         </article>
-        <article class="card reveal">
+        <article class="card">
           <img src="assets/dish-karahi.jpg" alt="Chicken karahi steaming in a black wok with tomatoes and chillies (demo photo)">
           <div class="card-body"><span class="badge">House signature</span><h3>Chicken Karahi — Half</h3><p>Tomato, green chillies and ginger, finished in desi ghee in the wok it is served in.</p><p class="price">Rs 1,795</p></div>
         </article>
-        <article class="card reveal">
+        <article class="card">
           <img src="assets/dish-biryani.jpg" alt="Chicken biryani in an opened clay handi with raita (demo photo)">
           <div class="card-body"><span class="badge">House signature</span><h3>Chicken Biryani</h3><p>A sealed handi opened at your table, saffron rice with raita on the side.</p><p class="price">Rs 645</p></div>
         </article>
       </div>
-      <p style="margin-top:26px"><a class="btn btn-dark" href="order.html">Order these on WhatsApp</a></p>
+      <p style="margin-top:26px" data-motion><a class="btn btn-dark" href="order.html">Order these on WhatsApp</a></p>
     </div>
   </section>
-
-  <section class="section section--dark">
+  <div class="book-spine"><div class="wrap book-spine-in"><p>Dinner plans? The table is the easy part.</p><div class="book-spine-actions"><a class="btn btn-primary" href="reservations.html">Reserve a table</a><a class="book-spine-tel" href="tel:+923001234567">or call 0300 123 4567</a></div></div></div>
+  <section class="section section--dark" id="tandoor-chapter">
     <div class="wrap split">
-      <div class="reveal">
-        <p class="kicker">From the kitchen</p>
-        <h2>A tandoor that never really cools</h2>
-        <p>Our breads are rolled and baked to order — roghni naan with its sesame and milk wash, garlic naan brushed with butter as it leaves the clay oven. The grill works the same way: nothing sits under a heat lamp, so a kebab reaches you within minutes of leaving the coals.</p>
-        <p>Saffron House is a fictional restaurant created for this portfolio demo — but the way a real restaurant website should work is exactly this: the menu, the prices, the booking and the order path, all on the page.</p>
-        <p><a class="btn btn-primary" href="visit.html">Our story &amp; visit details</a></p>
+      <div>
+        <p class="kicker" data-chapter-line>From the kitchen</p>
+        <h2 data-chapter-line>A tandoor that never really cools</h2>
+        <div class="chapter-rule" aria-hidden="true"></div>
+        <p data-chapter-line>Our breads are rolled and baked to order — roghni naan with its sesame and milk wash, garlic naan brushed with butter as it leaves the clay oven. The grill works the same way: nothing sits under a heat lamp, so a kebab reaches you within minutes of leaving the coals.</p>
+        <p data-chapter-line>Saffron House is a fictional restaurant created for this portfolio demo — but the way a real restaurant website should work is exactly this: the menu, the prices, the booking and the order path, all on the page.</p>
+        <p data-chapter-line><a class="btn btn-primary" href="visit.html">Our story &amp; visit details</a></p>
       </div>
-      <img class="reveal" src="assets/chef-tandoor.jpg" alt="Hands placing naan dough into a glowing clay tandoor oven (demo photo)">
+      <div class="chapter-media"><img class="chapter-img" src="assets/chef-tandoor.jpg" alt="Hands placing naan dough into a glowing clay tandoor oven (demo photo)"></div>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap">
-      <div class="section-head reveal">
+      <div class="section-head" data-motion>
         <p class="kicker">Guest reviews</p>
         <h2>What guests say</h2>
         <p>Rated 4.8 out of 5 from 214 Google reviews. The reviews below are demo reviews shown for this portfolio sample.</p>
@@ -101,16 +103,17 @@
       <div class="grid grid-2" id="homeReviews"></div>
     </div>
   </section>
+  <div class="book-spine"><div class="wrap book-spine-in"><p>Save your seat before the tandoor cools.</p><div class="book-spine-actions"><a class="btn btn-primary" href="reservations.html">Reserve a table</a><a class="book-spine-tel" href="tel:+923001234567">or call 0300 123 4567</a></div></div></div>
 
   <section class="section section--tint">
     <div class="wrap split">
-      <div class="reveal">
+      <div data-motion>
         <p class="kicker">Visit us</p>
         <h2>14-B Main Boulevard, Gulberg III, Lahore</h2>
         <p>Open every day, 12:00 pm – 12:00 am. Family hall and a quiet corner for working dinners. Parking on Main Boulevard; valet on weekends.</p>
         <p><a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&amp;query=Saffron+House+Main+Boulevard+Gulberg+III+Lahore" target="_blank" rel="noopener">Open in Google Maps</a> <a class="btn btn-ghost" style="color:var(--ink);border-color:var(--ink)" href="reservations.html">Reserve a table</a></p>
       </div>
-      <img class="reveal" src="assets/interior.jpg" alt="The warm dining room at Saffron House with brick walls and brass lamps (demo photo)">
+      <img data-motion src="assets/interior.jpg" alt="The warm dining room at Saffron House with brick walls and brass lamps (demo photo)">
     </div>
   </section>
 </main>
@@ -128,6 +131,10 @@
 <script src="js/data.js"></script>
 <script src="js/logic.js"></script>
 <script src="js/main.js"></script>
+<script defer src="assets/vendor/lenis.min.js"></script>
+<script defer src="assets/vendor/gsap.min.js"></script>
+<script defer src="assets/vendor/ScrollTrigger.min.js"></script>
+<script defer src="js/premium.js"></script>
 <script>
 (function(){var D=window.SAFFRON_DATA;document.getElementById('homeReviews').innerHTML=D.REVIEWS.slice(0,2).map(function(r){return '<article class="review-card"><p class="stars" aria-label="'+r.stars+' out of 5 stars">'+'★'.repeat(r.stars)+'☆'.repeat(5-r.stars)+'</p><p>'+r.text+'</p><p><strong>'+r.name+'</strong> · <span class="when">'+r.when+' · Google review (demo)</span></p></article>';}).join('');})();
 </script>

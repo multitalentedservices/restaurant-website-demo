@@ -1,0 +1,110 @@
+{
+  "index@phone": {
+    "overflowX": 0,
+    "badEls": [],
+    "hiddenCount": 0,
+    "brokenImgs": []
+  },
+  "menu@phone": {
+    "overflowX": 0,
+    "badEls": [],
+    "hiddenCount": 0,
+    "brokenImgs": []
+  },
+  "order@phone": {
+    "overflowX": 0,
+    "badEls": [],
+    "hiddenCount": 0,
+    "brokenImgs": []
+  },
+  "reservations@phone": {
+    "overflowX": 0,
+    "badEls": [],
+    "hiddenCount": 0,
+    "brokenImgs": []
+  },
+  "gallery@phone": {
+    "overflowX": 0,
+    "badEls": [],
+    "hiddenCount": 0,
+    "brokenImgs": []
+  },
+  "visit@phone": {
+    "overflowX": 0,
+    "badEls": [],
+    "hiddenCount": 0,
+    "brokenImgs": []
+  },
+  "index@tablet": {
+    "overflowX": 0,
+    "badEls": [],
+    "hiddenCount": 0,
+    "brokenImgs": []
+  },
+  "menu@tablet": {
+    "overflowX": 0,
+    "badEls": [],
+    "hiddenCount": 0,
+    "brokenImgs": []
+  },
+  "order@tablet": {
+    "overflowX": 0,
+    "badEls": [],
+    "hiddenCount": 0,
+    "brokenImgs": []
+  },
+  "reservations@tablet": {
+    "overflowX": 0,
+    "badEls": [],
+    "hiddenCount": 0,
+    "brokenImgs": []
+  },
+  "gallery@tablet": {
+    "overflowX": 0,
+    "badEls": [],
+    "hiddenCount": 0,
+    "brokenImgs": []
+  },
+  "visit@tablet": {
+    "overflowX": 0,
+    "badEls": [],
+    "hiddenCount": 0,
+    "brokenImgs": []
+  },
+  "index@desktop": {
+    "overflowX": 0,
+    "badEls": [],
+    "hiddenCount": 0,
+    "brokenImgs": []
+  },
+  "menu@desktop": {
+    "overflowX": 0,
+    "badEls": [],
+    "hiddenCount": 0,
+    "brokenImgs": []
+  },
+  "order@desktop": {
+    "overflowX": 0,
+    "badEls": [],
+    "hiddenCount": 0,
+    "brokenImgs": []
+  },
+  "reservations@desktop": {
+    "overflowX": 0,
+    "badEls": [],
+    "hiddenCount": 0,
+    "brokenImgs": []
+  },
+  "gallery@desktop": {
+    "overflowX": 0,
+    "badEls": [],
+    "hiddenCount": 0,
+    "brokenImgs": []
+  },
+  "visit@desktop": {
+    "overflowX": 0,
+    "badEls": [],
+    "hiddenCount": 0,
+    "brokenImgs": []
+  }
+}
